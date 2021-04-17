@@ -1,8 +1,8 @@
-import pulumi_aws as aws
 import pulumi
-
-from infrastructure.lambda_crud.role import role
+import pulumi_aws as aws
 from infrastructure.dynamodb.table import books_dynamodb_table
+from infrastructure.lambda_crud.role import role
+
 config = pulumi.Config()
 lambda_name = config.get('lambda_name')
 

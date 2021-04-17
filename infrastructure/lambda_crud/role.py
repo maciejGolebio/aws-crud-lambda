@@ -1,7 +1,7 @@
 import json
+
 import pulumi
 import pulumi_aws as aws
-
 from infrastructure.dynamodb.table import books_dynamodb_table
 
 config = pulumi.Config()
@@ -40,7 +40,7 @@ policy = aws.iam.Policy(
                             "dynamodb:PutItem",
                             "dynamodb:GetItem",
                             "dynamodb:DescribeTable"
-                            ],
+                        ],
                         "Resource": arn,
                         "Effect": "Allow",
                     },
@@ -59,7 +59,7 @@ policy = aws.iam.Policy(
     )
 )
 
-role_policy_attachment= aws.iam.RolePolicyAttachment(
+role_policy_attachment = aws.iam.RolePolicyAttachment(
     lambda_name,
     role=role.name,
     policy_arn=policy.arn)

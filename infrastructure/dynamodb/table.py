@@ -23,9 +23,5 @@ books_dynamodb_table = aws.dynamodb.Table(
         "Environment": "development",
         "Name": BOOKS_DYNAMODB_TABLE_NAME,
     },
-    ttl=aws.dynamodb.TableTtlArgs(
-        attribute_name="TimeToExist",
-        enabled=False,
-    ),
     write_capacity=20
 )
