@@ -1,0 +1,1 @@
+from infrastructure.dynamodb.table import *
