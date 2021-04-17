@@ -1,0 +1,4 @@
+encryptionsalt: v1:D3k/BX6/LGE=:v1:UcrVbzS7ozbz+6CW:Cvun5zF0ahiKnzNHXlbZ4U8KeBVW8Q==
+config:
+  aws-crud-lambda:lambda_name: lambda-crud
+  aws:region: eu-central-1
