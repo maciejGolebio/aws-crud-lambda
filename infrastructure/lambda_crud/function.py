@@ -6,7 +6,7 @@ from infrastructure.lambda_crud.role import role
 config = pulumi.Config()
 lambda_name = config.get('lambda_name')
 
-lambda_func = aws.lambda_.Function(
+lambda_crud = aws.lambda_.Function(
     lambda_name,
     runtime="python3.8",
     memory_size=256,
