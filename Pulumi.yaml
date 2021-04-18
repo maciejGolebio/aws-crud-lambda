@@ -1,0 +1,6 @@
+name: aws-crud-lambda
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: serverless crud
