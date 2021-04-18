@@ -17,11 +17,12 @@ strategy = {
 
 def handler(event, _):
     body = json.loads(event["body"])
+    print(body)
     book = create_book(body)
     resp = strategy.get(event.get("httpMethod"))(book)
     return {
         "statusCode": 200,
-        "body": resp
+        "body": json.dumps(resp)
     }
 
 
