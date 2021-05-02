@@ -1,7 +1,7 @@
 import pulumi
 import pulumi_aws as aws
 
-API_NAME = "BOOKS"
+API_NAME = "books-api"
 
 api = aws.apigateway.RestApi(
     API_NAME,

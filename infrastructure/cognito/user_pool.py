@@ -1,7 +1,7 @@
 import pulumi
 import pulumi_aws as aws
 
-pool = aws.cognito.UserPool("pool")
+pool = aws.cognito.UserPool("books-api", name="books-api")
 client = aws.cognito.UserPoolClient(
     "client",
     user_pool_id=pool.id,
