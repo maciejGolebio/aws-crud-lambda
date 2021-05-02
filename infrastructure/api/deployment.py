@@ -6,7 +6,7 @@ config = pulumi.Config()
 stage_name = config.get('stage')
 
 deployment = aws.apigateway.Deployment(
-    "deployment",
+    "books-api",
     rest_api=api.id,
     stage_name="",
     opts=pulumi.ResourceOptions(depends_on=[api, *integrations.values()])
